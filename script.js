@@ -19,6 +19,7 @@ let car_list = [
     new car("BMW","480i",2020,"",52345,""),
     new car("Buick","Encore",2018,"",12980,""),
     new car("Mazda","Miata",1996,"",10496,"")
+    new car("Cheverolet","Blazer",2020,"",20675,"")
 
 ]
 
