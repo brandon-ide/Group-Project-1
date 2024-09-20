@@ -5,22 +5,48 @@
     }
     .header {           /* style the header! */
         background: rgb(150, 199, 255);
+        width: 100%;
         top: 0px;
         left: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        width: 80%;
+        display: flex;
+    }
+
+    h1{             /*"Dreads & Deals Auto"*/
+        font-family: "Permanent Marker", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: azure;
+        text-shadow: 4px 3px 3px black;
+        width: 100%;
+        margin-top: 5px;
     }
 
     .logo {
-        height: 80px;
-        width: 150px;
-        margin-top: 5px;
-        margin-left: 5px;
+        height: 100px;
+        width: 165px;
+        
         cursor: pointer;
     }
 
     .hamburger-button {     /* style the button! */
-        float: right;
+        /* float: right; */
         cursor: pointer;
-        margin-top: -55px;
+        /* margin-top: -55px; */
         margin-right: 15px;
         padding: 5px;
     }
@@ -34,6 +60,27 @@
 
     ul {
         list-style: none;
+    }
+
+    .car-img{
+        width: 200px;
+        border: 3px black solid;
+        border-radius: 18px;
+        background-color:rgb(213, 230, 246);
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    .img-container1{
+
+    }
+
+    li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer {               /* style the footer! */
@@ -61,10 +108,6 @@
         color: green;
         margin-top: -190px;
         margin-left: 80%;
-    }
-
-    a {
-        text-decoration: none;
     }
 
 }
