@@ -42,10 +42,27 @@
 
     </header>
 
-<main>      <!--This main area will be where the mobile version's car slideshow goes.
-                It will also be where the grid of cars goes in the desktop version!-->   
-    
-    
+    <main>       <!--The div sections below currently contain the slider for the mobile version.-->  
+        <div id="container">
+            <div id="slider-container">
+                <span onclick="slideRight()" class="btn"></span>
+                <div id="slider">
+                    <div class="slide"><img src="Assets/e743ac821b8e468eaf1b5cc17d9dca22.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/ecda81caff0142f18e88a1713c488ce1.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/f1cd7b97999e409d807bcdb832365325.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/f9c7c73c-1484-4d08-bf78-858b182ff92c.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/cf3bb2ad-06a8-4a85-bc2f-fa5cc05085cb.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/Power-Wheels-Rainbow-Unicorn-Jeep-Wrangler-1.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/dbae53b18b9f431095ef6ab8cdd85111.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/PowerWheels-Offroad-2.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="" alt="" width="330" height="270"></div>
+                    <div class="slide"><span>150x150</span></div>
+                    <div class="slide"><span>150x150</span></div>
+                    <div class="slide"><span>150x150</span></div>
+                </div>
+                <span onclick="slideLeft()" class="btn"></span>
+            </div>
+        </div>
             <!--The symbols below need functions. When clicked, the heart adds the
                 shown car to your "favorites" list. When clicked, the dollar sign 
                 adds your selection to the shopping cart-->
@@ -53,15 +70,14 @@
     <a href="#"><p class="heart">&#9829;</p></a>
 
     <a href="#"><p class="dollarSign">$</p></a>
-</main>
+    </main>
+    <footer class="footer">     <!--Nothing will change with the footer functionally. Only the CSS will change!
+        When the footer CSS has reached it's final style, we can delete this comment-->
 
+        <p class="copyright">Dreads And Deals Auto - 2024 All Rights Reserved. &copy;</p>
+
+    </footer>
+    <script src="script.js"></script>
 </body>
-
-<footer class="footer">     <!--Nothing will change with the footer functionally. Only the CSS will change!
-                                When the footer CSS has reached it's final style, we can delete this comment-->
-
-    <p class="copyright">Dreads And Deals Auto - 2024 All Rights Reserved. &copy;</p>
-
-</footer>
 
 </html>

@@ -1,8 +1,73 @@
-@media screen and (min-width: 0px) {    /* This is the MOBILE version */
+@media only screen and (min-width: 0px) {  /* This is the MOBILE version */
 
     body {
         margin: 0;
+        padding: 0; /*ZG - removed default padding*/
     }
+
+    #container {     /*ZG - creates grid state for container*/
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    #slider-container { /*ZG*/
+        height: 300px;
+        width: 85vw;
+        max-width: 1400px;
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    #slider-container .btn {  /*ZG*/
+        position: absolute;
+        top: calc(50% - 30px);
+        height: 15px;
+        width: 15px;
+        border-left: 8px solid #696969;
+        border-top: 8px solid #696969;
+        cursor: pointer;
+    }
+
+    #slider-container .btn:hover {  /*ZG - hover state transformation*/
+        transform: scale(1.2);
+    }
+
+    #slider-container .btn.inactive {  /*ZG - inactive state style*/
+        border-color: #282828;
+    }
+
+    #slider-container .btn:first-of-type { /*ZG - sets the first btn transformations*/
+        transform: rotate(-45deg);
+        left: 10px;
+    }
+
+    #slider-container .btn:last-of-type { /*ZG - sets the last btn transformations*/
+        transform: rotate(135deg);
+        right: 10px;
+    }
+
+    #slider-container #slider { /*ZG - slider display styles*/
+        display: flex;
+        width: 1000%;
+        height: 100%;
+        transition: all .5s;
+    }
+
+    #slider-container #slider .slide { /*ZG - styles for each slide of the slider (use as default if the images don't load)*/
+        height: 90%;
+        margin: auto 10px;
+        background-color: #b5b5b5;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+    }
+
+    #slider-container #slider .slide span { /*ZG - Slider inside styles (can be removed once the images are set)*/ 
+        color: white;
+        font-size: 60px;
+    }
+
     .header {           /* style the header! */
         background: rgb(150, 199, 255);
         top: 0px;
@@ -70,7 +135,7 @@
 }
 
     
-@media screen and (min-width: 768px) {      /* This is the DESKTOP version */
+@media only screen and (min-width: 768px) {      /* This is the DESKTOP version */
 
     body {
         margin: 0;
@@ -133,4 +198,36 @@
         text-decoration: none;
     }
 
-}   
+} 
+
+/* @media only screen and (min-width: 768px) { /*Deactivates Slider at 768px
+    #container {
+        display: none;
+    }
+}  */
+
+
+@media only screen and (min-width: 1100px) {
+    #slider-container #slider .slide {
+        width: calc(2.5% - 20px);
+    }
+}
+
+@media only screen and (max-width: 1100px) { 
+    #slider-container #slider .slide {
+        width: calc(3.3333333% - 20px);
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    #slider-container #slider .slide {
+        width: calc(5% - 20px);
+    }
+}
+
+ 
+@media only screen and (max-width: 550px) { /*ZG - Slider Media Query*/
+    #slider-container #slider .slide {
+        width: calc(10% - 20px);
+    }
+}
