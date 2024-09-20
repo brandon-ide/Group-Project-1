@@ -250,19 +250,19 @@
 }  */
 
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1100px) { /*ZG - Slider Media Query*/
     #slider-container #slider .slide {
         width: calc(2.5% - 20px);
     }
 }
 
-@media only screen and (max-width: 1100px) { 
+@media only screen and (max-width: 1100px) {  /*ZG - Slider Media Query*/
     #slider-container #slider .slide {
         width: calc(3.3333333% - 20px);
     }
 }
 
-@media only screen and (max-width: 900px) { 
+@media only screen and (max-width: 900px) { /*ZG - Slider Media Query*/
     #slider-container #slider .slide {
         width: calc(5% - 20px);
     }
