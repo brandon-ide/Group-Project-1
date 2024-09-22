@@ -45,7 +45,7 @@ function setParams(w) {
     if (currentPosition < slidesCount) {
         buttons[1].classList.remove('inactive');
     }
-    if (currenPosition >= slidesCount) {
+    if (currentPosition >= slidesCount) {
         buttons[1].classList.add('inactive');
     }
 };
