@@ -223,17 +223,13 @@
     transition: 0.4s;
     }
 
-    .under-slider-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 84%;
-    margin-left: 2rem;
-    }
-
     p{
     text-align: center;
     margin-top: 0;
+    }
+
+    #favorite-icon{
+        width: 100%;
     }
 
     .footer {               /* style the footer! */
