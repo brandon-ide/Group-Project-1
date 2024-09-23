@@ -80,7 +80,7 @@ function slideLeft() {
     }
 };
 
-
+//end slider funtionality
 
 function menu() {
   var x = document.getElementById("myLinks");
