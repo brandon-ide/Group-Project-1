@@ -42,7 +42,16 @@
 
     </header>
 
-<main> 
+<main>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <button id="cash">Paying with Cash? Click this button</button>
+  
+<div id="cashMath">
+  <label id="cashTendered">Cash Amount Tendered:</label>
+  <input type="number" min="0.00" max="500000.00" placeholder="0.00">
+  <button id="calculateChange">Calculate Final Price</button>
+</div>
   
     <div class="row">
         <div class="col-75">
@@ -53,22 +62,22 @@
                 <div class="col-50">
                   <h3>Billing Address</h3>
                   <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                  <input type="text" id="fname" name="firstname" placeholder="Kevin Q. Faucher">
                   <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                  <input type="text" id="email" name="email" placeholder="john@example.com">
+                  <input type="text" id="email" name="email" placeholder="kevin@example.com">
                   <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <input type="text" id="adr" name="address" placeholder="313 N. Elk St.">
                   <label for="city"><i class="fa fa-institution"></i> City</label>
-                  <input type="text" id="city" name="city" placeholder="New York">
+                  <input type="text" id="city" name="city" placeholder="Adrian">
       
                   <div class="row">
                     <div class="col-50">
                       <label for="state">State</label>
-                      <input type="text" id="state" name="state" placeholder="NY">
+                      <input type="text" id="state" name="state" placeholder="MI">
                     </div>
                     <div class="col-50">
                       <label for="zip">Zip</label>
-                      <input type="text" id="zip" name="zip" placeholder="10001">
+                      <input type="text" id="zip" name="zip" placeholder="49221">
                     </div>
                   </div>
                 </div>
@@ -76,14 +85,11 @@
                 <div class="col-50">
                   <h3>Payment</h3>
                   <label for="fname">Accepted Cards</label>
-                  <div class="icon-container">
-                    <i class="fa fa-cc-visa" style="color:navy;"></i>
-                    <i class="fa fa-cc-amex" style="color:blue;"></i>
-                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  <div class="card-container">
+                    <p>Visa  -  MasterCard  -  Discover  -  Amex</p>
                   </div>
                   <label for="cname">Name on Card</label>
-                  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                  <input type="text" id="cname" name="cardname" placeholder="Cardy Cardson">
                   <label for="ccnum">Credit card number</label>
                   <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                   <label for="expmonth">Exp Month</label>
@@ -92,40 +98,21 @@
                   <div class="row">
                     <div class="col-50">
                       <label for="expyear">Exp Year</label>
-                      <input type="text" id="expyear" name="expyear" placeholder="2018">
+                      <input type="text" id="expyear" name="expyear" placeholder="2025">
                     </div>
                     <div class="col-50">
                       <label for="cvv">CVV</label>
-                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                      <input type="text" id="cvv" name="cvv" placeholder="269">
                     </div>
                   </div>
                 </div>
       
               </div>
-              <label>
-                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-              </label>
-              <input type="submit" value="Continue to checkout" class="btn">
+              <input type="submit" value="Purchase This Car" class="btn">
             </form>
           </div>
         </div>
       
-        <div class="col-25">
-          <div class="container">
-            <h4>Cart
-              <span class="price" style="color:black">
-                <i class="fa fa-shopping-cart"></i>
-                <b>4</b>
-              </span>
-            </h4>
-            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-            <hr>
-            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-          </div>
-        </div>
       </div>
 
 </main>
