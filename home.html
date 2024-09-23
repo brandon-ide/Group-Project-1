@@ -8,151 +8,86 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.goorker&disgleapis.com/css2?family=Permanent+Maplay=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">   
 </head>
 
 <body>
 
+<script src="script.js"></script>
+
    <header class="header">
 
-        <!--The image below is a placeholder. Please change the image source to the actual logo, then 
-            change the ALT property to "logo". Once that is done successfully, delete this comment - Thanks!-->
-    
-        <a class="brand-header" href="home.html">
-            <img class="logo" src="Images\Logo\Logo.png" alt="Dealership Logo" width="500" height="600">
-            <h1>Dreads & Deals Auto</h1> 
-        </a>
-
-        <div id="hamburger-menu">
-
-            <!--When the hamburger button below is clicked on, it should display the list items 
-                "Favorites" and "Cart", and if you click on the button again, it should hide the list items.
-                Use JavaScript to achieve this!-->
-            
-            <button class="hamburger-button"> ☰ </button>
-            
-                <div class="nav-links">
-                    
-                    <ul id="nav-list">
-
-                        <!--The list items below should be hidden at the beginning.
-                            Then when the hamburger button is clicked, the list items
-                            display. Achieve this through using JavaScript!-->
-                        
-                        <li><a href="favorites.html">Favorites</a></li>
-                        <li><a href="checkout.html">Cart</a></li>
-                    
-                    </ul>
-                </div>
+        
+        <div class="topnav">
+            <a class="brand-header" href="home.html">
+                <img id="logo" src="Assets\Logo.png" alt="Dealership Logo" width="90" height="120">
+            </a>
+            <h1>Dreads & Deals Auto</h1>
         </div>
+        <div class="hamburger">
+            <a href="javascript:void(0);" onclick="menu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </a>
+              <div id="myLinks">
+                <a href="#favorites">Favorites</a>
+                <a href="#checkout">Checkout</a>
+              </div>
+        </div>
+
+
+
 
     </header>
 
-<main>      <!--This main area will be where the mobile version's car slideshow goes.
-                It will also be where the grid of cars goes in the desktop version!-->   
-    
-    
+    <main>       <!--The div sections below currently contain the slider for the mobile version.-->  
+        <div id="container">
+            <div id="slider-container">
+                <span onclick="slideRight()" class="btn"></span>
+                <div id="slider">
+                    <div class="slide"><img src="Assets/e743ac821b8e468eaf1b5cc17d9dca22.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/ecda81caff0142f18e88a1713c488ce1.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/f1cd7b97999e409d807bcdb832365325.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/f9c7c73c-1484-4d08-bf78-858b182ff92c.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/cf3bb2ad-06a8-4a85-bc2f-fa5cc05085cb.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/Power-Wheels-Rainbow-Unicorn-Jeep-Wrangler-1.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/dbae53b18b9f431095ef6ab8cdd85111.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="Assets/PowerWheels-Offroad-2.jpg" alt="" width="330" height="270"></div>
+                    <div class="slide"><img src="" alt="" width="330" height="270"></div>
+                    <div class="slide"><span>150x150</span></div>
+                    <div class="slide"><span>150x150</span></div>
+                    <div class="slide"><span>150x150</span></div>
+                </div>
+                <span onclick="slideLeft()" class="btn"></span>
+            </div>
+            <div class="under-slider-buttons">
+                <div>
+                    <a href="#favorites">
+                        <img id="favorite-icon" onclick="favoritesButton()" 
+                        src="Assets\Not-Fav-Heart.png" width="75" height="75"
+                        alt="Click to visit Favorites"><p>Favorites</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#checkout">
+                        <img id="checkout-icon" onclick="checkoutButton()" src="Assets\Cart.png" width="75" height="75"
+                        alt="Click to visit Checkout"><p>Checkout</p>
+                    </a>
+                </div>    
+            </div>
             <!--The symbols below need functions. When clicked, the heart adds the
                 shown car to your "favorites" list. When clicked, the dollar sign 
                 adds your selection to the shopping cart-->
-
-        <ul class="img-container1">
-
-            <li class="car-img">
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
             
-            <li class="car-img">
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-            <!-- <li class="car-img"></li>
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-            <li class="car-img"></li>
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li> -->
-
-        </ul>   
-         
-        <!-- <ul class="img-container2">
-
-            <li class="car-img">
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-            
-            <li class="car-img">
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-            <li class="car-img"></li>
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-            <li class="car-img"></li>
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-        </ul>    -->
-
-        <!-- <ul class="img-container3">
-
-            <li class="car-img">
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-            
-            <li class="car-img">
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-            <li class="car-img"></li>
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-            <li class="car-img"></li>
-                <img src="Images\Cars\BMW\BMW-Front.jpg" alt="BMW" width="200" height="150">
-                <p>Make: BMW Model: 840i</p>
-                <p>Year: 2018 Color: Black</p>
-            </li>
-
-        </ul>    -->
-
-
-    <a href="#"><p class="heart">&#9829;</p></a>
-
-    <a href="#"><p class="dollarSign">$</p></a>
-</main>
-
+    </main>
+    <footer class="footer">     
+        <img id="footer-icons" src="Assets\Footer-Icons.png" width="75" height="75"alt="Socials">
+            <p class="copyright">Dreads And Deals Auto LLC.- 2024 All Rights Reserved. &copy;User Agreement
+                |Financial and Other Privacy Notices|Do Not Sell My Info
+                |Code of Conduct|Responsible Disclosure|Accessibility</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-
-<footer class="footer">     <!--Nothing will change with the footer functionally. Only the CSS will change!
-                                When the footer CSS has reached it's final style, we can delete this comment-->
-
-    <p class="copyright">Dreads And Deals Auto LLC.- 2024 All Rights Reserved. &copy;</p>
-
-</footer>
 
 </html>
