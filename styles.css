@@ -143,9 +143,9 @@
     overflow: hidden;
     }
     
-    .active {
-    background-color: #04AA6D;
-    color: white;
+    #addToCart {
+    border-radius: 5px;
+    width: 35%;
     }
 
     #logo {
@@ -207,6 +207,28 @@
         background: rgb(150, 199, 255);
         top: 0px;
         left: 0px;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+    }
+
+    #container{
+        width: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    ;
+    }
+
+    .row1 .row2 .ro3{
+        display: flex;
+        justify-content: center;
+    }
+
+    .card{
+        margin: 10px;
     }
 
     #logo {

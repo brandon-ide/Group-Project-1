@@ -79,7 +79,19 @@
     body {
         margin: 0;
         padding: 0; /*ZG - removed default padding*/
-        
+    }
+
+    main{
+        margin: 10px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+          
+    }
+
+    form{
+        width: 30%;
+        border-radius: 5px;
     }
 
     #container {     /*ZG - creates grid state for container*/
@@ -100,6 +112,27 @@
         flex-direction: column;
         justify-content: space-between;
         
+    }
+
+    #cash{
+        background: rgb(40, 101, 215);
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    #calculateChange{
+        background: rgb(40, 101, 215);
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    #checkout-submit{
+        background: rgb(40, 101, 215);
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
     }
 
     .card {
