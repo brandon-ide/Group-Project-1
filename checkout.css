@@ -143,6 +143,333 @@
         color: grey;
       }
 
+      @media only screen and (min-width: 0px) {  /* This is the MOBILE version */
+
+        body {
+            margin: 0;
+            padding: 0; /*ZG - removed default padding*/
+            
+        }
+    
+        #container {     /*ZG - creates grid state for container*/
+            height: 100%;   /*BJ - Removed vh on height as page was scrolling down, not needed*/
+            display: grid;
+            place-items: center;
+            margin-top: 100px;
+        }
+    
+        #slider-container { /*ZG*/
+            height: 70vh;
+            width: 85vw;
+            max-width: 1400px;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+    
+        }
+    
+        #slider-container .btn {  /*ZG*/
+            position: absolute;
+            top: calc(50% - 30px);
+            height: 15px;
+            width: 15px;
+            border-left: 8px solid #696969;
+            border-top: 8px solid #696969;
+            cursor: pointer;
+        }
+    
+        #slider-container .btn:hover {  /*ZG - hover state transformation */
+            transform: scale(1.2);
+        }
+    
+        #slider-container .btn.inactive {  /*ZG - inactive state style */
+            border-color: #282828;
+        }
+    
+        #slider-container .btn:first-of-type { /*ZG - sets the first btn transformations */
+            transform: rotate(-45deg);
+            left: 10px;
+        }
+    
+        #slider-container .btn:last-of-type { /*ZG - sets the last btn transformations */
+            transform: rotate(135deg);
+            right: 10px;
+        }
+    
+        #slider-container #slider { /*ZG - slider display styles */
+            display: flex;
+            width: 1000%; /*BJ - is 1000% correct?*/
+            height: 100%;
+            transition: all .5s;
+        }
+    
+        #slider-container #slider .slide { /*ZG - styles for each slide of the slider (use as default if the images don't load)*/
+            height: 90%;
+            width: 60vw;
+            margin: auto 10px;
+            background-color: rgb(212, 212, 212);
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+    
+        /* .one {
+            margin-left: 20px;
+        } */
+    
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            min-width: 350px;
+          }
+    
+          .card img {
+            max-height: 45%;
+            min-height: 45%;
+            max-width: 100%;
+            min-width: 100%;
+          }
+          
+          .price {
+            color: rgb(15, 15, 15);
+            font-size: 22px;
+          }
+          
+          .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+          }
+          
+          .card button:hover {
+            opacity: 0.7;
+          }
+    
+        .header {           /* style the header! */
+            background: rgb(150, 199, 255);
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        h1{             /*"Dreads & Deals Auto"*/
+            font-family: "Permanent Marker", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: azure;
+            text-shadow: 4px 3px 3px black;
+            width: 100%;
+            margin-top: 5px;
+            margin-right: 30px;
+            font-size: 36px;
+            text-align: center;
+           
+        }
+    
+        .topnav {
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 90%;
+        }
+              
+        .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+        
+        
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+    
+        .hamburger {
+        position: absolute;
+        right: 2.5rem;
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    
+        .hamburger a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        }
+    
+        #myLinks {
+        display: none;
+        height: 6rem;
+        background-color: rgb(40, 101, 215);
+        z-index: 10;
+        position: absolute;
+        margin-top: 4rem;
+        margin-left: 3rem;
+        width: 6rem;
+        overflow: hidden;
+        }
+        
+        .active {
+        background-color: #04AA6D;
+        color: white;
+        }
+    
+        #logo {
+            height: 90px;
+            width: 120px;
+            cursor: pointer;
+        }
+    
+        #cart{
+            display: none;
+        }
+    
+        .hamburger-menu{
+            display: flex;
+            flex-direction: row;
+            background-color: blueviolet;
+            width: 100%;
+        }
+    
+        .hamburger-button {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+        }
+    
+        .under-slider-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 84%;
+        margin-left: 2rem;
+        }
+    
+        p{
+        text-align: center;
+        margin-top: 0;
+        }
+    
+        .footer {               /* style the footer! */
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background:rgb(150, 199, 255);
+            height: 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .copyright {
+            font-size: 15px;
+            width: 47rem;
+        }
+    
+        #footer-icons{
+            align-items: center;
+            width: 35rem;
+        }
+    }
+    
+        
+    @media only screen and (min-width: 768px) {      /* This is the DESKTOP version */
+    
+        body {
+            margin: 0;
+        }
+        .header {           /* style the header! */
+            background: rgb(150, 199, 255);
+            top: 0px;
+            left: 0px;
+        }
+    
+        #logo {
+            height: 100px;
+            width: 135px;
+            cursor: pointer;
+        }             
+        .hamburger-button {
+            display: inline-block;
+            cursor: pointer;
+          }
+          
+          .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+          }
+          
+    
+        .nav-links {            /* Style these links so they end up side by side */
+            display: block;
+        }
+    
+        .footer {               /* style the footer color! */
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background:rgb(150, 199, 255);
+        }
+    
+        .copyright {        /* style the footer text! */
+            display: flex;
+            justify-content: center;
+        }
+    
+        .heart {
+            font-size: 65pt;
+            color: red;
+            margin-top: 400px;
+            margin-left: 15%;
+        }
+    
+        .dollarSign {
+            font-size: 65pt;
+            color: green;
+            margin-top: -190px;
+            margin-left: 80%;
+        }
+    
+        a {
+            text-decoration: none;
+        }
+
 }
 
     
@@ -208,5 +535,5 @@
     a {
         text-decoration: none;
     }
-
-}  
+  }
+}

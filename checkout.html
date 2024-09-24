@@ -6,41 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Project 1</title>
     <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
 
+  <script src="slider.js"></script>
+
    <header class="header">
 
-        <!--The image below is a placeholder. Please change the image source to the actual logo, then 
-            change the ALT property to "logo". Once that is done successfully, delete this comment - Thanks!-->
-    
-        <a href="home.html"><img class="logo" src="https://picsum.photos/200/300?grayscale" alt="placeholder"></a>
+      <div class="topnav">
+        <a class="brand-header" href="home.html">
+            <img id="logo" src="Assets\Icons\Logo.png" alt="Dealership Logo" width="90" height="120">
+        </a>
+        <h1>Dreads & Deals Auto</h1>
+    </div>
+    <div class="hamburger">
+        <a href="javascript:void(0);" onclick="menu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </a>
+          <div id="myLinks">
+            <a href="favorites.html">Favorites</a>
+            <a href="checkout.html">Checkout</a>
+          </div>
+    </div>
 
-        <div id="hamburger-menu">
-
-            <!--When the hamburger button below is clicked on, it should display the list items 
-                "Favorites" and "Cart", and if you click on the button again, it should hide the list items.
-                Use JavaScript to achieve this!-->
-            
-            <button class="hamburger-button"> ☰ </button>
-            
-                <div class="nav-links">
-                    
-                    <ul>
-
-                        <!--The list items below should be hidden at the beginning.
-                            Then when the hamburger button is clicked, the list items
-                            display. Achieve this through using JavaScript!-->
-                        
-                        <li><a href="favorites.html">Favorites</a></li>
-                        <li><a href="checkout.html">Cart</a></li>
-                    
-                    </ul>
-                </div>
-            </div>
-
-    </header>
+  </header>
 
 <main>
 
@@ -119,11 +114,11 @@
 
 </body>
 
-<footer class="footer">     <!--Nothing will change with the footer functionally. Only the CSS will change!
-                                When the footer CSS has reached it's final style, we can delete this comment-->
-
-    <p class="copyright">Dreads And Deals Auto - 2024 All Rights Reserved. &copy;</p>
-
+<footer class="footer">     
+  <img id="footer-icons" src="Assets\Icons\Socials.png" width="75" height="75"alt="Socials">
+      <p class="copyright">Dreads And Deals Auto LLC.- 2024 All Rights Reserved. &copy;User Agreement
+          |Financial and Other Privacy Notices|Do Not Sell My Info
+          |Code of Conduct|Responsible Disclosure|Accessibility</p>
 </footer>
 
 </html>
