@@ -58,7 +58,7 @@
         transition: all .5s;
     }
 
-    #slider-container #slider .slide { /*ZG - styles for each slide of the slider (use as default if the images don't load)*/
+    .slide { /*ZG - styles for each slide of the slider (use as default if the images don't load)*/
         height: 90%;
         width: 60vw;
         margin: auto 10px;
@@ -89,6 +89,7 @@
         min-height: 45%;
         max-width: 100%;
         min-width: 100%;
+        border-radius: 5px;
       }
       
       .price {
