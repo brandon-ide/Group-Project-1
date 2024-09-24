@@ -2,7 +2,7 @@
 
     body {
         margin: 0;
-        padding: 0; /*ZG - removed default padding*/
+        padding: 0; /*ZG - removed default padding */
         
     }
 
@@ -15,14 +15,8 @@
     }
 
 
-    #slider-container #slider { /*ZG - slider display styles */
-        display: flex;
-        width: 1000%; /*BJ - is 1000% correct?*/
-        height: 100%;
-        transition: all .5s;
-    }
 
-    .slide { /*ZG - styles for each slide of the slider (use as default if the images don't load)*/
+    .slide { /*ZG - styles for each slide */
         height: 90%;
         width: 60vw;
         margin: auto 10px;
