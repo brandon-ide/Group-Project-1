@@ -91,5 +91,24 @@ function menu() {
   }
 }
 
+//Shopping cart funcitonality
+// //First we check if we're on the page that needs to add content to the cart.
+// const addToCartButton = document.getElementById('addToCart');
 
+// if (addToCartButton) {
+//     addToCartButton.addEventListener('click', function() {
+//         /*const itemPrice = 50;
+        
+//         localStorage.setItem('totalPrice', itemPrice);
+        
+//         window.location.href = 'checkout.html';*/
+//     });
+// }
 
+// const totalPriceElement = document.getElementById('totalPrice');
+
+// if (totalPriceElement) {
+//     const storedPrice = localStorage.getItem('totalPrice');
+
+//     totalPriceElement.textContent = storedPrice ? `$${storedPrice}` : 'No items in cart';
+// }
