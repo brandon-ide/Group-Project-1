@@ -7,7 +7,7 @@
     }
 
     #container {     /*ZG - creates grid state for container*/
-        height: 100%;   /*BJ - Removed vh on height as page was scrolling down, not needed*/
+        height: 100%;   
         display: grid;
         place-items: center;
         margin-top: 100px;
@@ -67,7 +67,7 @@
         opacity: 0.7;
       }
 
-    .header {           /* style the header! */
+    .header {          
         background: rgb(150, 199, 255);
         width: 100%;
         top: 0px;
@@ -75,6 +75,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
     h1{             /*"Dreads & Deals Auto"*/
@@ -115,7 +116,7 @@
     .hamburger {
     position: absolute;
     right: 2.5rem;
-    height: 4rem;
+    height: 5rem;
     width: 4rem;
     display: flex;
     flex-direction: column;
@@ -155,18 +156,6 @@
 
     #cart{
         display: none;
-    }
-
-    .hamburger-menu{
-        display: flex;
-        flex-direction: row;
-        background-color: blueviolet;
-        width: 100%;
-    }
-
-    .hamburger-button {
-        display: inline-block;
-        cursor: pointer;
     }
     
     .bar1, .bar2, .bar3 {
@@ -209,7 +198,6 @@
     }
 }
 
-    
 @media only screen and (min-width: 768px) {      /* This is the DESKTOP version */
 
     body {
