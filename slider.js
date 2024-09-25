@@ -134,26 +134,21 @@ window.addEventListener("click", function(event) {
     }
 });
 
-const togglePaymentMethod = () => {
-    const creditCardInput = document.getElementById("card");
-    const cashInput = document.getElementById("cash");
-
-    console.log("Cash checked:", cashInput.checked);
-    console.log("Card checked:", creditCardInput.checked);
-
-    
-    const creditCardDiv = document.getElementById("creditCard");
-    const cashMathDiv = document.getElementById("cashMath");
-
-    if (creditCardInput.checked) {
-        creditCardDiv.style.display = "block";
-        cashMathDiv.style.display = "none"; // Hide cash section
-    } else if (cashInput.checked) {
-        creditCardDiv.style.display = "none"; // Hide credit card section
-        cashMathDiv.style.display = "block"; // Show cash section
-    } else {
-        creditCardDiv.style.display = "none";
-        cashMathDiv.style.display = "none"; // Optional: hide both if none are selected
+function toggleOption(option) {
+    if (option === 'cash') {
+        cashMath.style.display = "block";
+        creditCard.style.display = "none";
+    } else if (option === 'credit') {
+        creditCard.style.display = "block";
+        cashMath.style.display = "none";
     }
-};
+}
+
+function changeDue() { //STILL WORKING ON THIS FUNCTION
+    let cashPayed = document.getElementById("customerCash").value;
+    let carPrice = document.getElementById("totalDue").innerHTML.value;
+    let result = cashPayed - carPrice;
+    document.getElementById('result').innerHTML = 'Change Due Back: ' + result;
+}
+
 

@@ -128,16 +128,6 @@
         text-align: center;
     }
 
-    #cashMath{
-        /* display: none; not able to get function to work*/
-        margin-top: 20px;
-    }
-
-    #creditCard{
-        /* display: none; not able to get function to work*/
-        margin-top: 20px;
-    }
-
     p{
     text-align: center;
     margin-top: 0;
@@ -163,6 +153,18 @@
     #footer-icons{
         align-items: center;
         width: 35rem;
+    }
+
+    #creditCard {
+        display: none;
+    }
+    
+    #cashMath {
+        display: none;
+    }
+
+    #cart {
+        cursor: pointer;
     }
 }
 
@@ -284,5 +286,17 @@
 .close-button:focus {
     color: black;
     text-decoration: none;
+    cursor: pointer;
+}
+
+#creditCard {
+    display: none;
+}
+
+#cashMath {
+    display: none;
+}
+
+#cart {
     cursor: pointer;
 }
