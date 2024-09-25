@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">   
 </head>
 <body>
-<script src="slider.js"></script>
    <header class="header">
         <div class="topnav">
             <a class="brand-header" href="home.html">
@@ -19,111 +18,73 @@
             </a>
             <h1>Dreads & Deals Auto</h1>
         </div>
-        <div class="hamburger">
-            <a href="javascript:void(0);" onclick="menu()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-              </a>
-              <div id="myLinks">
-                <a href="favorites.html">Favorites</a>
-                <a href="checkout.html">Checkout</a>
-              </div>
+        <!-- <span onclick="openModal()">Checkout</span> -->
+        <div id="checkout">    
+            <span onclick="openModal()">
+                <img id="cart" src="Assets\Icons\Checkout.png" alt="Cart" width="90" height="90">
+                Checkout
+            </span>
         </div>
     </header>
     <main>       <!--The div sections below currently contain the slider for the mobile version.-->  
-        <div id="container">
-                <div class="row1">
-                    <div class="slide card one"><img src="Assets\Cars\Blazer.jpg" alt="Blazer" width="330" height="200">
-                        <h2>2022 Blazer RS</h2>
-                        <p class="price">$59,999</p>
-                        <p>Miles: 17,864 / Engine: 3.6L V6</p>
-                        <p>Range: City 18, Hwy 27 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
+        <div id="container"></div>
+        <!-- Modal Structure -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2>Scroll down for your total</h2>
+                <div id="cartContainer"></div>
+                <h4 id="subtotal"></h4>
+                <h4 id="salesTax"></h4>
+                <h4 id="totalDue"></h4>
+                <div id="payment">
+                    <form>
+                        <p>Please select your method of payment:</p>
+                        <input type="radio" id="cash" name="payment-type" onclick="togglePaymentMethod()" checked>
+                        <label for="cash">Cash</label><br>
+                        <input type="radio" id="card" name="payment-type" onclick="togglePaymentMethod()">
+                        <label for="card">Card</label><br>
+                    </form>
+                    
+                    <div id="cashMath">
+                        <label id="cashTendered">Cash Amount Tendered:</label>
+                        <input id="cashInput" type="number" min="0.00" max="500000.00" placeholder="0.00">
+                        <button id="calculateChange" onclick="tenderCash()">Submit Payment</button>
                     </div>
-                    <div class="slide card"><img src="Assets\Cars\Barbie-Jeep.jpg"  alt="Barbie" width="330" height="200">
-                        <h2>2020 Jeep Rubicon</h2>
-                        <p class="price">$62,999</p>
-                        <p>Miles: 17 / Engine: Hybrid Gas/Electric</p>
-                        <p>Range: 22 EV / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\Buick.jpg" alt="Buick" width="330" height="200">
-                        <h2>2022 Buick Encore</h2>
-                        <p class="price">$20,777</p>
-                        <p>Miles: 32,548 / Engine: 1.4L V4 Turbo</p>
-                        <p>Range: City 23, Hwy 30 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\Mazda.jpg" alt="Mazda" width="330" height="200">
-                        <h2>2018 Mazda MX-5 Miata</h2>
-                        <p class="price">$23,200</p>
-                        <p>Miles: 12,439 / Engine: 2.0L V4</p>
-                        <p>Range: City 26, Hwy 35 / Rear Wheel Drive</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="row2">
-                    <div class="slide card"><img src="Assets\Cars\Porsche.jpg" alt="Porsche" width="330" height="200">
-                        <h2>2024 Porsche 911 GT3 RS</h2>
-                        <p class="price">$459,999</p>
-                        <p>Miles: 431 / Engine: 4.0L V6</p>
-                        <p>Range: City 14, Hwy 18 / Rear Wheel Drive</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\Cadillac.jpg" alt="Cadillac" width="330" height="200">
-                        <h2>2018 Cadillac CTS Vsport</h2>
-                        <p class="price">$33,500</p>
-                        <p>Miles: 67,190 / Engine: 3.6L V6</p>
-                        <p>Range: City 16, Hwy 24 / Rear Wheel Drive</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\Toyota.jpg" alt="Toyota" width="330" height="200">
-                        <h2>1998 Toyota Supra Turbo</h2>
-                        <p class="price">$200,000</p>
-                        <p>Miles: 106,000 / Engine: 3.0L V6</p>
-                        <p>Range: City 15, Hwy 20 / Rear Wheel Drive</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\BMW-Front.jpg" alt="ATV" width="330" height="200">
-                        <h2>BMW</h2>
-                        <p class="price">$91,977</p>
-                        <p>Miles: 17,864 / Engine: 3.6L V6</p>
-                        <p>Range: City 15, Hwy 21 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
+                    
+                    <div id="creditCard" style="display: none;">
+                        <h2>Enter Your Credit Card Information</h2>
+                        <form id="creditCardForm" onsubmit="return saveInfo();">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" id="cardNumber" maxlength="16" placeholder="Enter Card Number" required><br><br>
+                            <label for="expiration">Expiration Date (MM/YY):</label>
+                            <input type="text" id="expiration" maxlength="5" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" required><br><br>
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" maxlength="3" placeholder="123" pattern="^\d{3}$" required><br><br>
+                            <input id="checkout-submit" type="submit" value="Submit Payment" onclick="tenderCredit()">
+                        </form>
                     </div>
                 </div>
-                <div class="row3">
-                    <div class="slide card"><img src="Assets\Cars\Batmobile.png" alt="Golf-Cart" width="330" height="200">
-                        <h2>Batmobile</h2>
-                        <p class="price">$239,000</p>
-                        <p>Miles: 17,864 / Engine: 3.6L V6</p>
-                        <p>Range: City 17, Hwy 2 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\Ford-GT.png" alt="Golf-Cart" width="330" height="200">
-                        <h2>Blazer</h2>
-                        <p class="price">$19.99</p>
-                        <p>Miles: 17,864 / Engine: 3.6L V6</p>
-                        <p>Range: City 17, Hwy 2 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card"><img src="Assets\Cars\Truck.png" alt="Golf-Cart" width="330" height="200">
-                        <h2>Blazer</h2>
-                        <p class="price">$19.99</p>
-                        <p>Miles: 17,864 / Engine: 3.6L V6</p>
-                        <p>Range: City 17, Hwy 2 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
-                    </div>
-                    <div class="slide card last"><img src="Assets\Cars\Humvee.png" alt="Golf-Cart" width="330" height="200">
-                        <h2>Blazer</h2>
-                        <p class="price">$19.99</p>
-                        <p>Miles: 17,864 / Engine: 3.6L V6</p>
-                        <p>Range: City 17, Hwy 2 / AWD</p>
-                        <p><button id="addToCart">Add to Cart</button></p>
+                <div id="receipt">
+                    Dreads + Deals Auto
+                    <br /><br />
+                    Thank you so much for your business!
+                    <br /><br />
+                    Item Count: <span id="itemCount"></span>
+                    <br /><br />
+                    Amount Paid: <span id="paid"></span>
+                    <br /><br />
+                    Amount Due: <span id="total"></span>
+                    <br /><br />
+                    Change Received: <span id="change"></span>
+
+                    <div id="cardInfo">
+                        <br /><br />
+                        Paid with card: <span id="lastFour"></span>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
     <footer class="footer">     
         <img id="footer-icons" src="Assets\Icons\Socials.png" width="75" height="75"alt="Socials">
