@@ -17,6 +17,7 @@
 
     .slide { /*ZG - styles for each slide */
         height: 90%;
+        min-height: 389.97px;
         width: fit-content;
         margin: auto 10px;
         background-color: rgb(212, 212, 212);
