@@ -12,22 +12,20 @@
         place-items: center;
         margin-top: 100px;
         margin-bottom: 250px;
+        
     }
-
-
 
     .slide { /*ZG - styles for each slide */
         height: 90%;
-        width: 60vw;
+        width: fit-content;
         margin: auto 10px;
         background-color: rgb(212, 212, 212);
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
+        text-align: center;
     }
-
 
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
@@ -78,7 +76,7 @@
         align-items: center;
     }
 
-    h1{             /*"Dreads & Deals Auto"*/
+    h1{            
         font-family: "Permanent Marker", cursive;
         font-weight: 400;
         font-style: normal;
@@ -107,40 +105,9 @@
     font-size: 17px;
     }
     
-    
     .topnav a:hover {
     background-color: #ddd;
     color: black;
-    }
-
-    .hamburger {
-    position: absolute;
-    right: 2.5rem;
-    height: 5rem;
-    width: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-
-    .hamburger a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    }
-
-    #myLinks {
-    display: none;
-    height: 6rem;
-    background-color: rgb(40, 101, 215);
-    z-index: 10;
-    position: absolute;
-    margin-top: 4rem;
-    margin-left: 3rem;
-    width: 6rem;
-    overflow: hidden;
     }
     
     #addToCart {
@@ -154,16 +121,21 @@
         cursor: pointer;
     }
 
-    #cart{
-        display: none;
+    #checkout{
+        width: 99px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
-    
-    .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
+
+    #cashMath{
+        /* display: none; not able to get function to work*/
+        margin-top: 20px;
+    }
+
+    #creditCard{
+        /* display: none; not able to get function to work*/
+        margin-top: 20px;
     }
 
     p{
@@ -171,11 +143,7 @@
     margin-top: 0;
     }
 
-    #favorite-icon{
-        width: 100%;
-    }
-
-    .footer {               /* style the footer! */
+    .footer {               
         position: fixed;
         left: 0;
         bottom: 0;
@@ -202,8 +170,9 @@
 
     body {
         margin: 0;
+        width: 100%;
     }
-    .header {           /* style the header! */
+    .header {           
         background: rgb(150, 199, 255);
         top: 0px;
         left: 0px;
@@ -215,16 +184,12 @@
     }
 
     #container{
-        width: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 16px; 
+        padding: 16px;
     ;
-    }
-
-    .row1 .row2 .ro3{
-        display: flex;
-        justify-content: center;
     }
 
     .card{
@@ -236,25 +201,8 @@
         width: 135px;
         cursor: pointer;
     }             
-    .hamburger-button {
-        display: inline-block;
-        cursor: pointer;
-      }
       
-      .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        margin: 6px 0;
-        transition: 0.4s;
-      }
-      
-
-    .nav-links {            /* Style these links so they end up side by side */
-        display: block;
-    }
-
-    .footer {               /* style the footer color! */
+    .footer {              
         position: fixed;
         left: 0;
         bottom: 0;
@@ -262,23 +210,9 @@
         background:rgb(150, 199, 255);
     }
 
-    .copyright {        /* style the footer text! */
+    .copyright {        
         display: flex;
         justify-content: center;
-    }
-
-    .heart {
-        font-size: 65pt;
-        color: red;
-        margin-top: 400px;
-        margin-left: 15%;
-    }
-
-    .dollarSign {
-        font-size: 65pt;
-        color: green;
-        margin-top: -190px;
-        margin-left: 80%;
     }
 
     a {
@@ -286,12 +220,6 @@
     }
 
 } 
-
-/* @media only screen and (min-width: 768px) { /*Deactivates Slider at 768px
-    #container {
-        display: none;
-    }
-}  */
 
 
 @media only screen and (min-width: 1100px) { /*ZG - Slider Media Query*/
@@ -317,4 +245,44 @@
     #slider-container #slider .slide {
         width: calc(10% - 20px);
     }
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
