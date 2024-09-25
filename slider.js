@@ -33,6 +33,7 @@ const displayCars = () =>{
         carList.forEach(car => {
             let carDiv = document.createElement("div");
             carDiv.classList.add("slide");
+            carDiv.classList.add("card");
     
             carDiv.innerHTML = `
                 <img src="${car.picture}" alt="${car.make}" width="330">
