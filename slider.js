@@ -45,9 +45,6 @@ const displayCars = () =>{
     }
 }
 
-
-
-
 const updateSubTotalDue = () => {
     document.getElementById("subtotal").innerHTML = `Subtotal: $${getSubTotalCartPrice(cartItems).toLocaleString()}`;
 };
@@ -101,6 +98,64 @@ const displayCart = () =>{
         });
 }
 
+const togglePaymentMethod = () => {
+    const receiptDiv = document.getElementById("receipt");
+    receiptDiv.style.display = "none";
+
+    document.getElementById("cashInput").value = '';
+    document.getElementById("cardNumber").value = '';
+    document.getElementById("expiration").value = '';
+    document.getElementById("cvv").value = '';
+
+    const creditCardInput = document.getElementById("card");
+    const cashInput = document.getElementById("cash");
+
+    const creditCardDiv = document.getElementById("creditCard");
+    const cashMathDiv = document.getElementById("cashMath");
+
+    if (creditCardInput.checked) {
+        creditCardDiv.style.display = "block"; // Show credit card section
+        cashMathDiv.style.display = "none"; // Hide cash section
+    } else if (cashInput.checked) {
+        creditCardDiv.style.display = "none"; // Hide credit card section
+        cashMathDiv.style.display = "block"; // Show cash section
+    }
+};
+
+const tenderCash = () => {
+    const cashInput = document.getElementById("cashInput");
+    const cashAmount = parseFloat(cashInput.value).toFixed(2);
+    
+    const total = getTotalDue(cartItems).toFixed(2);
+
+    const changeDue = (cashAmount - total).toFixed(2);
+
+    const receiptDiv = document.getElementById("receipt");
+    receiptDiv.style.display = "block";
+
+    document.getElementById("itemCount").innerHTML = `${cartItems.length}`;
+    document.getElementById("paid").innerHTML = `$${cashAmount}`;
+    document.getElementById("total").innerHTML = `$${total}`;
+    document.getElementById("change").innerHTML = `$${changeDue}`;
+};
+
+const tenderCredit = () => {  
+    const total = getTotalDue(cartItems).toFixed(2);
+    const receiptDiv = document.getElementById("receipt");
+    receiptDiv.style.display = "block";
+
+    const cardInfoDiv = document.getElementById("cardInfo");
+    cardInfoDiv.style.display = "block";
+    const cardNumberInput = document.getElementById("cardNumber");
+    const lastFourDigits = cardNumberInput.value.slice(-4);
+
+    document.getElementById("itemCount").innerHTML = `${cartItems.length}`;
+    document.getElementById("paid").innerHTML = `$${total}`;
+    document.getElementById("total").innerHTML = `$${total}`;
+    document.getElementById("change").innerHTML = `$0.00`;
+    document.getElementById("lastFour").innerHTML = `XXXX-XXXX-XXXX-${lastFourDigits}`;
+};
+
 // Get modal element
 const modal = document.getElementById("myModal");
 
@@ -133,27 +188,4 @@ window.addEventListener("click", function(event) {
         closeModal();
     }
 });
-
-const togglePaymentMethod = () => {
-    const creditCardInput = document.getElementById("card");
-    const cashInput = document.getElementById("cash");
-
-    console.log("Cash checked:", cashInput.checked);
-    console.log("Card checked:", creditCardInput.checked);
-
-    
-    const creditCardDiv = document.getElementById("creditCard");
-    const cashMathDiv = document.getElementById("cashMath");
-
-    if (creditCardInput.checked) {
-        creditCardDiv.style.display = "block";
-        cashMathDiv.style.display = "none"; // Hide cash section
-    } else if (cashInput.checked) {
-        creditCardDiv.style.display = "none"; // Hide credit card section
-        cashMathDiv.style.display = "block"; // Show cash section
-    } else {
-        creditCardDiv.style.display = "none";
-        cashMathDiv.style.display = "none"; // Optional: hide both if none are selected
-    }
-};
 
