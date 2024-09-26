@@ -181,6 +181,20 @@
 
     #cart:hover {
         background-color: #ddd;
+        background:rgb(150, 199, 255);
+        height: 5rem;
+    }
+
+    .copyright {
+        text-align: right;
+        font-size: 12px;
+    }
+
+    #footer-icons{
+        margin-left: 5%;
+        margin-top: 10px;
+        height: 4rem;
+        width: 20rem;
     }
 }
 
