@@ -176,6 +176,11 @@
 
     #cart {
         cursor: pointer;
+        
+    }
+
+    #cart:hover {
+        background-color: #ddd;
     }
 }
 
