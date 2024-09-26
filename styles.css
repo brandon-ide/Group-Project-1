@@ -167,7 +167,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) {      /* This is the DESKTOP version */
+@media only screen and (min-width: 1200px) {      /* This is the DESKTOP version */
 
     body {
         margin: 0;
@@ -222,32 +222,27 @@
 
 } 
 
-
-@media only screen and (min-width: 1100px) { /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(2.5% - 20px);
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
+    #container{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px; 
+        padding: 16px;
+    ;
     }
 }
 
-@media only screen and (max-width: 1100px) {  /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(3.3333333% - 20px);
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+    #container{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 16px; 
+        padding: 16px;
+    ;
     }
 }
-
-@media only screen and (max-width: 900px) { /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(5% - 20px);
-    }
-}
-
- 
-@media only screen and (max-width: 550px) { /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(10% - 20px);
-    }
-}
-
 
 /* Modal Styles */
 .modal {
