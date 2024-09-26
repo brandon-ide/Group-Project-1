@@ -66,7 +66,8 @@
         opacity: 0.7;
       }
 
-    .header {          
+    .header {
+        position: sticky;        
         background: rgb(150, 199, 255);
         width: 100%;
         top: 0px;
