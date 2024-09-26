@@ -150,20 +150,22 @@
         bottom: 0;
         width: 100%;
         background:rgb(150, 199, 255);
-        height: 8rem;
+        height: 6rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .copyright {
+        text-align: center;
         font-size: 15px;
-        width: 47rem;
     }
 
     #footer-icons{
         align-items: center;
-        width: 35rem;
+        margin-top: 8px;
+        height: 50px;
+        width: 300px;
     }
 }
 
