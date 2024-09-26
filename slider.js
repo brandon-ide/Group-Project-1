@@ -158,6 +158,7 @@ const tenderCredit = () => {
     document.getElementById("lastFour").innerHTML = `XXXX-XXXX-XXXX-${lastFourDigits}`;
 };
 
+
 // Get modal element
 const modal = document.getElementById("myModal");
 
