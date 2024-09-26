@@ -68,7 +68,7 @@
 
     .header {
         position: sticky;        
-        background: rgb(150, 199, 255);
+        background: rgb(44, 44, 252);
         width: 100%;
         top: 0px;
         left: 0px;
@@ -76,6 +76,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    #cartText {
+        color: white;
     }
 
     h1{            
@@ -150,7 +154,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background:rgb(150, 199, 255);
+        background: rgb(44, 44, 252);
         height: 6rem;
         display: flex;
         flex-direction: column;
@@ -158,6 +162,7 @@
     }
 
     .copyright {
+        color: white;
         text-align: center;
         font-size: 15px;
     }
@@ -181,7 +186,7 @@
         width: 100%;
     }
     .header {           
-        background: rgb(150, 199, 255);
+        background: rgb(44, 44, 252);
         top: 0px;
         left: 0px;
     }
@@ -189,6 +194,10 @@
     main{
         display: flex;
         justify-content: center;
+    }
+
+    #cartText {
+        color: white;
     }
 
     #container{
@@ -215,12 +224,13 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background:rgb(150, 199, 255);
+        background: rgb(44, 44, 252);
     }
 
     .copyright {        
         display: flex;
         justify-content: center;
+        color: white;
     }
 
     a {
