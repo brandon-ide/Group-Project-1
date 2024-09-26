@@ -21,7 +21,8 @@ let carList = [
     new Car("Porsche", "911 GT3", 2024, "Luxury sports car", 182000, "Assets/Cars/Porsche.jpg"),
     new Car("AM General", "Humvee", 2000, "Tough & Rugged", 18000, "Assets/Cars/Humvee.png"),
     new Car("Ford", "Ford GT", 2022, "Luxury sports car", 251000, "Assets/Cars/Ford-GT.png"),
-    new Car("Batman", "Batmobile", 1989, "I am Batman!", 1500000, "Assets/Cars/Batmobile.png")
+    new Car("Batman", "Batmobile", 1989, "I am Batman!", 1500000, "Assets/Cars/Batmobile.png"),
+    new Car("Space", "Ghost", 1965, "Coast to Coast", 200000, "Assets/Cars/Space Ghost.png")
 ];
 
 const cartItems = [];
@@ -32,6 +33,7 @@ const displayCars = () =>{
         carList.forEach(car => {
             let carDiv = document.createElement("div");
             carDiv.classList.add("slide");
+            carDiv.classList.add("card");
     
             carDiv.innerHTML = `
                 <img src="${car.picture}" alt="${car.make}" width="330">
@@ -155,6 +157,7 @@ const tenderCredit = () => {
     document.getElementById("change").innerHTML = `$0.00`;
     document.getElementById("lastFour").innerHTML = `XXXX-XXXX-XXXX-${lastFourDigits}`;
 };
+
 
 // Get modal element
 const modal = document.getElementById("myModal");

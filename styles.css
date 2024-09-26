@@ -17,6 +17,7 @@
 
     .slide { /*ZG - styles for each slide */
         height: 90%;
+        min-height: 389.97px;
         width: fit-content;
         margin: auto 10px;
         background-color: rgb(212, 212, 212);
@@ -65,8 +66,9 @@
         background-color: rgb(255, 144, 52);
       }
 
-    .header {          
-        background: rgb(150, 199, 255);
+    .header {
+        position: sticky;        
+        background: rgb(44, 44, 252);
         width: 100%;
         top: 0px;
         left: 0px;
@@ -74,6 +76,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    #cartText {
+        color: white;
     }
 
     h1{            
@@ -148,32 +154,58 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background:rgb(150, 199, 255);
-        height: 8rem;
+        background: rgb(44, 44, 252);
+        height: 6rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .copyright {
+        color: white;
+        text-align: center;
         font-size: 15px;
-        width: 47rem;
     }
 
     #footer-icons{
         align-items: center;
-        width: 35rem;
+        margin-top: 8px;
+        height: 50px;
+        width: 300px;
+    }
+
+    #cart {
+        cursor: pointer;
+        
+    }
+
+    #cart:hover {
+        background-color: #ddd;
+        background:rgb(150, 199, 255);
+        height: 5rem;
+    }
+
+    .copyright {
+        text-align: right;
+        font-size: 12px;
+    }
+
+    #footer-icons{
+        margin-left: 5%;
+        margin-top: 10px;
+        height: 4rem;
+        width: 20rem;
     }
 }
 
-@media only screen and (min-width: 768px) {      /* This is the DESKTOP version */
+@media only screen and (min-width: 1200px) {      /* This is the DESKTOP version */
 
     body {
         margin: 0;
         width: 100%;
     }
     .header {           
-        background: rgb(150, 199, 255);
+        background: rgb(44, 44, 252);
         top: 0px;
         left: 0px;
     }
@@ -181,6 +213,10 @@
     main{
         display: flex;
         justify-content: center;
+    }
+
+    #cartText {
+        color: white;
     }
 
     #container{
@@ -207,12 +243,13 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background:rgb(150, 199, 255);
+        background: rgb(44, 44, 252);
     }
 
     .copyright {        
         display: flex;
         justify-content: center;
+        color: white;
     }
 
     a {
@@ -221,32 +258,27 @@
 
 } 
 
-
-@media only screen and (min-width: 1100px) { /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(2.5% - 20px);
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
+    #container{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px; 
+        padding: 16px;
+    ;
     }
 }
 
-@media only screen and (max-width: 1100px) {  /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(3.3333333% - 20px);
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+    #container{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 16px; 
+        padding: 16px;
+    ;
     }
 }
-
-@media only screen and (max-width: 900px) { /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(5% - 20px);
-    }
-}
-
- 
-@media only screen and (max-width: 550px) { /*ZG - Slider Media Query*/
-    #slider-container #slider .slide {
-        width: calc(10% - 20px);
-    }
-}
-
 
 /* Modal Styles */
 .modal {
